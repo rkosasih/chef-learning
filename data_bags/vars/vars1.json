@@ -1,0 +1,5 @@
+{
+    "id" : "end-points",
+    "nexus_url" : "http://nexus",
+    "svn_url" : "http://svn"
+}
