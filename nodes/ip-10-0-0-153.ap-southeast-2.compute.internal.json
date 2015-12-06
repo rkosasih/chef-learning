@@ -1,9 +1,20 @@
 {
   "name": "ip-10-0-0-153.ap-southeast-2.compute.internal",
+  "override": {
+    "my_cookbook": {
+      "version": "1.5"
+    }
+  },
   "normal": {
     "tags": [
 
     ]
+  },
+  "default": {
+    "my_cookbook": {
+      "message": "Hello World From My_CookBook",
+      "version": "1.2.3"
+    }
   },
   "automatic": {
     "cpu": {
@@ -13,7 +24,7 @@
         "model": "62",
         "model_name": "Intel(R) Xeon(R) CPU E5-2670 v2 @ 2.50GHz",
         "stepping": "4",
-        "mhz": "2500.090",
+        "mhz": "2494.030",
         "cache_size": "25600 KB",
         "physical_id": "0",
         "core_id": "0",
@@ -81,13 +92,13 @@
     "filesystem": {
       "/dev/xvda2": {
         "kb_size": "10473452",
-        "kb_used": "1891420",
-        "kb_available": "8582032",
-        "percent_used": "19%",
+        "kb_used": "2305872",
+        "kb_available": "8167580",
+        "percent_used": "23%",
         "mount": "/",
         "total_inodes": "10483648",
-        "inodes_used": "76366",
-        "inodes_available": "10407282",
+        "inodes_used": "85970",
+        "inodes_available": "10397678",
         "inodes_percent_used": "1%",
         "fs_type": "xfs",
         "mount_options": [
@@ -302,10 +313,6 @@
           "size": "13259",
           "refcount": "0"
         },
-        "ppdev": {
-          "size": "17671",
-          "refcount": "0"
-        },
         "aesni_intel": {
           "size": "52846",
           "refcount": "0"
@@ -329,6 +336,10 @@
         "cryptd": {
           "size": "20359",
           "refcount": "3"
+        },
+        "ppdev": {
+          "size": "17671",
+          "refcount": "0"
         },
         "serio_raw": {
           "size": "13462",
@@ -403,23 +414,23 @@
         "free": "0kB"
       },
       "total": "1883272kB",
-      "free": "1434684kB",
+      "free": "1463244kB",
       "buffers": "700kB",
-      "cached": "203832kB",
-      "active": "211684kB",
-      "inactive": "145700kB",
-      "dirty": "28kB",
+      "cached": "166596kB",
+      "active": "212260kB",
+      "inactive": "109060kB",
+      "dirty": "4kB",
       "writeback": "0kB",
-      "anon_pages": "152844kB",
-      "mapped": "27496kB",
-      "slab": "50916kB",
-      "slab_reclaimable": "26292kB",
-      "slab_unreclaim": "24624kB",
-      "page_tables": "6764kB",
+      "anon_pages": "154080kB",
+      "mapped": "27736kB",
+      "slab": "56552kB",
+      "slab_reclaimable": "30260kB",
+      "slab_unreclaim": "26292kB",
+      "page_tables": "6784kB",
       "nfs_unstable": "0kB",
       "bounce": "0kB",
       "commit_limit": "941636kB",
-      "committed_as": "403892kB",
+      "committed_as": "403980kB",
       "vmalloc_total": "34359738367kB",
       "vmalloc_used": "5220kB",
       "vmalloc_chunk": "34359732223kB"
@@ -526,8 +537,8 @@
           },
           "state": "up",
           "arp": {
-            "10.0.0.1": "02:82:8c:41:81:6f",
-            "10.0.0.2": "02:82:8c:41:81:6f"
+            "10.0.0.2": "02:82:8c:41:81:6f",
+            "10.0.0.1": "02:82:8c:41:81:6f"
           },
           "routes": [
             {
@@ -569,15 +580,15 @@
         "interfaces": {
           "lo": {
             "rx": {
-              "bytes": "1652",
-              "packets": "16",
+              "bytes": "1228",
+              "packets": "12",
               "errors": "0",
               "drop": "0",
               "overrun": "0"
             },
             "tx": {
-              "bytes": "1652",
-              "packets": "16",
+              "bytes": "1228",
+              "packets": "12",
               "errors": "0",
               "drop": "0",
               "carrier": "0",
@@ -587,16 +598,16 @@
           "eth0": {
             "tx": {
               "queuelen": "1000",
-              "bytes": "1148990",
-              "packets": "9438",
+              "bytes": "3634271",
+              "packets": "31531",
               "errors": "0",
               "drop": "0",
               "carrier": "0",
               "collisions": "0"
             },
             "rx": {
-              "bytes": "1458950",
-              "packets": "14735",
+              "bytes": "12429125",
+              "packets": "53665",
               "errors": "0",
               "drop": "0",
               "overrun": "0"
@@ -616,10 +627,10 @@
     "platform": "redhat",
     "platform_version": "7.1",
     "platform_family": "rhel",
-    "uptime_seconds": 2034,
-    "uptime": "33 minutes 54 seconds",
-    "idletime_seconds": 1999,
-    "idletime": "33 minutes 19 seconds",
+    "uptime_seconds": 17074,
+    "uptime": "4 hours 44 minutes 34 seconds",
+    "idletime_seconds": 16926,
+    "idletime": "4 hours 42 minutes 06 seconds",
     "virtualization": {
       "systems": {
         "xen": "guest"
@@ -681,12 +692,12 @@
       "by_device": {
         "/dev/xvda2": {
           "kb_size": "10473452",
-          "kb_used": "1891420",
-          "kb_available": "8582032",
-          "percent_used": "19%",
+          "kb_used": "2305872",
+          "kb_available": "8167580",
+          "percent_used": "23%",
           "total_inodes": "10483648",
-          "inodes_used": "76366",
-          "inodes_available": "10407282",
+          "inodes_used": "85970",
+          "inodes_available": "10397678",
           "inodes_percent_used": "1%",
           "fs_type": "xfs",
           "mount_options": [
@@ -931,12 +942,12 @@
       "by_mountpoint": {
         "/": {
           "kb_size": "10473452",
-          "kb_used": "1891420",
-          "kb_available": "8582032",
-          "percent_used": "19%",
+          "kb_used": "2305872",
+          "kb_available": "8167580",
+          "percent_used": "23%",
           "total_inodes": "10483648",
-          "inodes_used": "76366",
-          "inodes_available": "10407282",
+          "inodes_used": "85970",
+          "inodes_available": "10397678",
           "inodes_percent_used": "1%",
           "fs_type": "rootfs",
           "mount_options": [
@@ -1318,13 +1329,13 @@
         "/dev/xvda2,/": {
           "device": "/dev/xvda2",
           "kb_size": "10473452",
-          "kb_used": "1891420",
-          "kb_available": "8582032",
-          "percent_used": "19%",
+          "kb_used": "2305872",
+          "kb_available": "8167580",
+          "percent_used": "23%",
           "mount": "/",
           "total_inodes": "10483648",
-          "inodes_used": "76366",
-          "inodes_available": "10407282",
+          "inodes_used": "85970",
+          "inodes_available": "10397678",
           "inodes_percent_used": "1%",
           "fs_type": "xfs",
           "mount_options": [
@@ -1796,8 +1807,8 @@
             "Version": "Not Specified",
             "Voltage": "Unknown",
             "External Clock": "Unknown",
-            "Max Speed": "2500 MHz",
-            "Current Speed": "2500 MHz",
+            "Max Speed": "2494 MHz",
+            "Current Speed": "2494 MHz",
             "Status": "Populated, Enabled",
             "Upgrade": "Other"
           }
@@ -1810,8 +1821,8 @@
         "version": "Not Specified",
         "voltage": "Unknown",
         "external_clock": "Unknown",
-        "max_speed": "2500 MHz",
-        "current_speed": "2500 MHz",
+        "max_speed": "2494 MHz",
+        "current_speed": "2494 MHz",
         "status": "Populated, Enabled",
         "upgrade": "Other"
       },
@@ -1847,7 +1858,7 @@
         "rotational": "0"
       }
     },
-    "ohai_time": 1448751358.4058745,
+    "ohai_time": 1449366753.7621295,
     "etc": {
       "passwd": {
         "root": {
@@ -2017,6 +2028,20 @@
           "uid": 188,
           "shell": "/sbin/nologin",
           "gecos": "haproxy"
+        },
+        "ntp": {
+          "dir": "/etc/ntp",
+          "gid": 38,
+          "uid": 38,
+          "shell": "/sbin/nologin",
+          "gecos": ""
+        },
+        "glassfish-user": {
+          "dir": "/home/glassfish-user",
+          "gid": 1002,
+          "uid": 1002,
+          "shell": "/bin/bash",
+          "gecos": "Runtime user for glassfish"
         }
       },
       "group": {
@@ -2271,28 +2296,40 @@
           "members": [
 
           ]
+        },
+        "ntp": {
+          "gid": 38,
+          "members": [
+
+          ]
+        },
+        "glassfish-user": {
+          "gid": 1002,
+          "members": [
+
+          ]
         }
       }
     },
     "current_user": "root",
     "root_group": "root",
     "recipes": [
-      "data-bag-test",
-      "data-bag-test::default"
+      "my_cookbook",
+      "my_cookbook::default"
     ],
     "expanded_run_list": [
-      "data-bag-test::default"
+      "my_cookbook::default"
     ],
     "roles": [
 
     ],
     "cookbooks": {
-      "data-bag-test": {
+      "my_cookbook": {
         "version": "0.1.0"
       }
     }
   },
   "run_list": [
-    "recipe[data-bag-test]"
+    "recipe[my_cookbook]"
   ]
 }

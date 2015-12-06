@@ -6,5 +6,5 @@ description 'Installs/Configures my_cookbook'
 long_description 'Installs/Configures my_cookbook'
 version '0.1.0'
 
-depends "apt"
-depends "ntp"
+#depends "apt"
+#depends "ntp"
