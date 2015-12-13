@@ -106,13 +106,37 @@ http_request 'callback' do
   only_if "test -f /etc/passwd"
 end
 
+# Test empty file trigger
+template "/tmp/trigger" do
+  notifies :run, "bash[run_on_trigger]", :immediately 
+end
+
+bash "run_on_trigger" do
+  user "root"
+  cwd "/tmp"
+  code "echo 'Action Has Been Triggered'"
+  action :nothing 
+end
+
+# Test remote directory
+remote_directory "/tmp/remote_dir_test" do
+  source "additional_libs"
+end
+
+# Test chef file specificity
+template "/tmp/file_specificity/my_message.txt" do
+  source "my_message.erb"
+end
+
+# Test running libraries
+#extend Convert::Json
+
+_user="ec2-user"
+_group="ec2-user"
+
+Chef::Recipe.send(:include, Pip::Methods)
+convert_json_to_cli "#{_user}", "#{_group}"
+
 Chef::Log.info("** my_cookbook runs successfully!")
-
-
-
-
-
-
-
 
 
