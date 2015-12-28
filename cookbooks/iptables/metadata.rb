@@ -6,4 +6,5 @@ description 'Installs/Configures iptables'
 long_description 'Installs/Configures iptables'
 version '2.0.1'
 
-depends 'compat_resource', '>= 0.0.0'
+# commented for chef-zero to work
+#depends 'compat_resource', '>= 0.0.0'

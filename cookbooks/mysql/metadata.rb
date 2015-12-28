@@ -6,6 +6,7 @@ description 'Installs/Configures mysql'
 long_description 'Installs/Configures mysql'
 version '6.1.2'
 
-depends "yum-mysql-community", ">= 0.0.0"
-depends "smf", ">= 0.0.0"
+# commented for chef-zero to work
+#depends "yum-mysql-community", ">= 0.0.0"
+#depends "smf", ">= 0.0.0"
 

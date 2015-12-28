@@ -6,4 +6,5 @@ description 'Installs/Configures my_wordpress'
 long_description 'Installs/Configures my_wordpress'
 version '0.1.0'
 
-depends "wordpress"
+# commented for chef-zero to work
+#depends "wordpress"

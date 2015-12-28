@@ -1,10 +1,5 @@
 {
   "name": "ip-10-0-0-153.ap-southeast-2.compute.internal",
-  "override": {
-    "my_cookbook": {
-      "version": "1.5"
-    }
-  },
   "normal": {
     "tags": [
 
@@ -13,7 +8,11 @@
   "default": {
     "my_cookbook": {
       "message": "Hello World From My_CookBook",
-      "version": "1.2.3"
+      "version": "1.2.3",
+      "callback": {
+        "url": "http://www.chef.io",
+        "enabled": true
+      }
     }
   },
   "automatic": {
@@ -24,7 +23,7 @@
         "model": "62",
         "model_name": "Intel(R) Xeon(R) CPU E5-2670 v2 @ 2.50GHz",
         "stepping": "4",
-        "mhz": "2494.030",
+        "mhz": "2500.060",
         "cache_size": "25600 KB",
         "physical_id": "0",
         "core_id": "0",
@@ -92,13 +91,13 @@
     "filesystem": {
       "/dev/xvda2": {
         "kb_size": "10473452",
-        "kb_used": "2305872",
-        "kb_available": "8167580",
+        "kb_used": "2318688",
+        "kb_available": "8154764",
         "percent_used": "23%",
         "mount": "/",
         "total_inodes": "10483648",
-        "inodes_used": "85970",
-        "inodes_available": "10397678",
+        "inodes_used": "86890",
+        "inodes_available": "10396758",
         "inodes_percent_used": "1%",
         "fs_type": "xfs",
         "mount_options": [
@@ -341,6 +340,10 @@
           "size": "17671",
           "refcount": "0"
         },
+        "i2c_piix4": {
+          "size": "22106",
+          "refcount": "0"
+        },
         "serio_raw": {
           "size": "13462",
           "refcount": "0"
@@ -349,6 +352,10 @@
           "size": "12718",
           "refcount": "0"
         },
+        "i2c_core": {
+          "size": "40325",
+          "refcount": "1"
+        },
         "parport_pc": {
           "size": "28165",
           "refcount": "0"
@@ -356,14 +363,6 @@
         "parport": {
           "size": "42348",
           "refcount": "2"
-        },
-        "i2c_piix4": {
-          "size": "22106",
-          "refcount": "0"
-        },
-        "i2c_core": {
-          "size": "40325",
-          "refcount": "1"
         },
         "xfs": {
           "size": "915019",
@@ -414,23 +413,23 @@
         "free": "0kB"
       },
       "total": "1883272kB",
-      "free": "1463244kB",
+      "free": "1454540kB",
       "buffers": "700kB",
-      "cached": "166596kB",
-      "active": "212260kB",
-      "inactive": "109060kB",
-      "dirty": "4kB",
+      "cached": "156980kB",
+      "active": "235484kB",
+      "inactive": "101916kB",
+      "dirty": "24kB",
       "writeback": "0kB",
-      "anon_pages": "154080kB",
-      "mapped": "27736kB",
-      "slab": "56552kB",
-      "slab_reclaimable": "30260kB",
-      "slab_unreclaim": "26292kB",
-      "page_tables": "6784kB",
+      "anon_pages": "179716kB",
+      "mapped": "27784kB",
+      "slab": "49852kB",
+      "slab_reclaimable": "24640kB",
+      "slab_unreclaim": "25212kB",
+      "page_tables": "7084kB",
       "nfs_unstable": "0kB",
       "bounce": "0kB",
       "commit_limit": "941636kB",
-      "committed_as": "403980kB",
+      "committed_as": "456100kB",
       "vmalloc_total": "34359738367kB",
       "vmalloc_used": "5220kB",
       "vmalloc_chunk": "34359732223kB"
@@ -580,15 +579,15 @@
         "interfaces": {
           "lo": {
             "rx": {
-              "bytes": "1228",
-              "packets": "12",
+              "bytes": "1129804",
+              "packets": "3120",
               "errors": "0",
               "drop": "0",
               "overrun": "0"
             },
             "tx": {
-              "bytes": "1228",
-              "packets": "12",
+              "bytes": "1129804",
+              "packets": "3120",
               "errors": "0",
               "drop": "0",
               "carrier": "0",
@@ -598,16 +597,16 @@
           "eth0": {
             "tx": {
               "queuelen": "1000",
-              "bytes": "3634271",
-              "packets": "31531",
+              "bytes": "3351576",
+              "packets": "28475",
               "errors": "0",
               "drop": "0",
               "carrier": "0",
               "collisions": "0"
             },
             "rx": {
-              "bytes": "12429125",
-              "packets": "53665",
+              "bytes": "8146179",
+              "packets": "47679",
               "errors": "0",
               "drop": "0",
               "overrun": "0"
@@ -627,10 +626,10 @@
     "platform": "redhat",
     "platform_version": "7.1",
     "platform_family": "rhel",
-    "uptime_seconds": 17074,
-    "uptime": "4 hours 44 minutes 34 seconds",
-    "idletime_seconds": 16926,
-    "idletime": "4 hours 42 minutes 06 seconds",
+    "uptime_seconds": 12421,
+    "uptime": "3 hours 27 minutes 01 seconds",
+    "idletime_seconds": 12276,
+    "idletime": "3 hours 24 minutes 36 seconds",
     "virtualization": {
       "systems": {
         "xen": "guest"
@@ -692,12 +691,12 @@
       "by_device": {
         "/dev/xvda2": {
           "kb_size": "10473452",
-          "kb_used": "2305872",
-          "kb_available": "8167580",
+          "kb_used": "2318688",
+          "kb_available": "8154764",
           "percent_used": "23%",
           "total_inodes": "10483648",
-          "inodes_used": "85970",
-          "inodes_available": "10397678",
+          "inodes_used": "86890",
+          "inodes_available": "10396758",
           "inodes_percent_used": "1%",
           "fs_type": "xfs",
           "mount_options": [
@@ -942,12 +941,12 @@
       "by_mountpoint": {
         "/": {
           "kb_size": "10473452",
-          "kb_used": "2305872",
-          "kb_available": "8167580",
+          "kb_used": "2318688",
+          "kb_available": "8154764",
           "percent_used": "23%",
           "total_inodes": "10483648",
-          "inodes_used": "85970",
-          "inodes_available": "10397678",
+          "inodes_used": "86890",
+          "inodes_available": "10396758",
           "inodes_percent_used": "1%",
           "fs_type": "rootfs",
           "mount_options": [
@@ -1003,12 +1002,12 @@
         },
         "/run": {
           "kb_size": "941636",
-          "kb_used": "16600",
-          "kb_available": "925036",
+          "kb_used": "16632",
+          "kb_available": "925004",
           "percent_used": "2%",
           "total_inodes": "235409",
-          "inodes_used": "272",
-          "inodes_available": "235137",
+          "inodes_used": "282",
+          "inodes_available": "235127",
           "inodes_percent_used": "1%",
           "fs_type": "tmpfs",
           "mount_options": [
@@ -1329,13 +1328,13 @@
         "/dev/xvda2,/": {
           "device": "/dev/xvda2",
           "kb_size": "10473452",
-          "kb_used": "2305872",
-          "kb_available": "8167580",
+          "kb_used": "2318688",
+          "kb_available": "8154764",
           "percent_used": "23%",
           "mount": "/",
           "total_inodes": "10483648",
-          "inodes_used": "85970",
-          "inodes_available": "10397678",
+          "inodes_used": "86890",
+          "inodes_available": "10396758",
           "inodes_percent_used": "1%",
           "fs_type": "xfs",
           "mount_options": [
@@ -1391,13 +1390,13 @@
         "tmpfs,/run": {
           "device": "tmpfs",
           "kb_size": "941636",
-          "kb_used": "16600",
-          "kb_available": "925036",
+          "kb_used": "16632",
+          "kb_available": "925004",
           "percent_used": "2%",
           "mount": "/run",
           "total_inodes": "235409",
-          "inodes_used": "272",
-          "inodes_available": "235137",
+          "inodes_used": "282",
+          "inodes_available": "235127",
           "inodes_percent_used": "1%",
           "fs_type": "tmpfs",
           "mount_options": [
@@ -1719,7 +1718,7 @@
             "application_identifier": "BIOS Information",
             "Vendor": "Xen",
             "Version": "4.2.amazon",
-            "Release Date": "05/06/2015",
+            "Release Date": "12/07/2015",
             "Address": "0xE8000",
             "Runtime Size": "96 kB",
             "ROM Size": "64 kB",
@@ -1733,7 +1732,7 @@
         ],
         "vendor": "Xen",
         "version": "4.2.amazon",
-        "release_date": "05/06/2015",
+        "release_date": "12/07/2015",
         "address": "0xE8000",
         "runtime_size": "96 kB",
         "rom_size": "64 kB",
@@ -1807,8 +1806,8 @@
             "Version": "Not Specified",
             "Voltage": "Unknown",
             "External Clock": "Unknown",
-            "Max Speed": "2494 MHz",
-            "Current Speed": "2494 MHz",
+            "Max Speed": "2500 MHz",
+            "Current Speed": "2500 MHz",
             "Status": "Populated, Enabled",
             "Upgrade": "Other"
           }
@@ -1821,8 +1820,8 @@
         "version": "Not Specified",
         "voltage": "Unknown",
         "external_clock": "Unknown",
-        "max_speed": "2494 MHz",
-        "current_speed": "2494 MHz",
+        "max_speed": "2500 MHz",
+        "current_speed": "2500 MHz",
         "status": "Populated, Enabled",
         "upgrade": "Other"
       },
@@ -1858,7 +1857,7 @@
         "rotational": "0"
       }
     },
-    "ohai_time": 1449366753.7621295,
+    "ohai_time": 1451288702.2320583,
     "etc": {
       "passwd": {
         "root": {

@@ -85,15 +85,15 @@ end
 
 # retrieving data bags
 hook = data_bag_item('hooks','request_bin')
-http_request 'callback' do
-  url hook['url']
-end
+#http_request 'callback' do
+#  url hook['url']
+#end
 
-search(:hooks, '*:*').each do |hook|
-http_request 'callback' do
-  url hook['url']
-  end
-end
+#search(:hooks, '*:*').each do |hook|
+#http_request 'callback' do
+#  url hook['url']
+#  end
+#end
 
 # Test only_if
 http_request 'callback' do
@@ -136,6 +136,27 @@ _group="ec2-user"
 
 Chef::Recipe.send(:include, Pip::Methods)
 convert_json_to_cli "#{_user}", "#{_group}"
+
+# Get servers based on role
+my_servers = search(:node, "role:my_cookbook_role AND chef_environment:acceptance")
+
+my_servers.each do |my_server|
+  log "#{my_server}"
+end
+
+# Test local template, test local template with data_bag
+db_vars = data_bag_item('vars','db_details')
+template "/tmp/local_template/template.txt" do
+  local true
+  # Note: it works without file.erb 
+  source "/tmp/my_local_template.txt" 
+  variables(
+    _db_host: db_vars['db_host'],
+    _db_user: db_vars['db_user'],
+    my_servers: my_servers
+
+  )
+end
 
 Chef::Log.info("** my_cookbook runs successfully!")
 

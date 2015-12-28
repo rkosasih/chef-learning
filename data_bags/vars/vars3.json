@@ -1,0 +1,5 @@
+{
+  "id" : "db_details",
+  "db_host" : "db_host123.domain.local",
+  "db_user" : "mysql_user"
+}
