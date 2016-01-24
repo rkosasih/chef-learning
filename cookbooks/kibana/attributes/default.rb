@@ -1,7 +1,7 @@
 # Encoding: utf-8
 
 #<> Kibana version
-default['kibana']['version'] = '2'
+default['kibana']['version'] = '2.0'
 #<> Kibana3 exact version
 default['kibana']['kibana3_version'] = '3.0.0'
 #<> The base directory of kibana.
