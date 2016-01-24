@@ -14,17 +14,17 @@ default['filebeat']['config']['filebeat']['config_dir'] = node['filebeat']['pros
 
 default['filebeat']['config']['output'] = {}
 # elasticsearch host info
-# default['filebeat']['config']['output']['elasticsearch']['enabled'] = true
-# default['filebeat']['config']['output']['elasticsearch']['hosts'] = []
-# default['filebeat']['config']['output']['elasticsearch']['save_topology'] = false
-# default['filebeat']['config']['output']['elasticsearch']['max_retries'] = 3
-# default['filebeat']['config']['output']['elasticsearch']['bulk_max_size'] = 1000
-# default['filebeat']['config']['output']['elasticsearch']['flush_interval'] = nil
-# default['filebeat']['config']['output']['elasticsearch']['protocol'] = 'http'
-# default['filebeat']['config']['output']['elasticsearch']['username'] = nil
-# default['filebeat']['config']['output']['elasticsearch']['password'] = nil
-# default['filebeat']['config']['output']['elasticsearch']['index'] = 'filebeat'
-# default['filebeat']['config']['output']['elasticsearch']['path'] = '/elasticsearch'
+ default['filebeat']['config']['output']['elasticsearch']['enabled'] = true
+ default['filebeat']['config']['output']['elasticsearch']['hosts'] = ["52.62.16.28:9200"]
+ default['filebeat']['config']['output']['elasticsearch']['save_topology'] = false
+ default['filebeat']['config']['output']['elasticsearch']['max_retries'] = 3
+ default['filebeat']['config']['output']['elasticsearch']['bulk_max_size'] = 1000
+ default['filebeat']['config']['output']['elasticsearch']['flush_interval'] = nil
+ default['filebeat']['config']['output']['elasticsearch']['protocol'] = 'http'
+ default['filebeat']['config']['output']['elasticsearch']['username'] = nil
+ default['filebeat']['config']['output']['elasticsearch']['password'] = nil
+ default['filebeat']['config']['output']['elasticsearch']['index'] = 'filebeat'
+ default['filebeat']['config']['output']['elasticsearch']['path'] = '/elasticsearch'
 
 # default['filebeat']['config']['output']['logstash']['enabled'] = false
 # default['filebeat']['config']['output']['logstash']['hosts'] = []
